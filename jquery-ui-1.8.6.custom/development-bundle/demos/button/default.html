@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<title>jQuery UI Button - Default functionality</title>
@@ -10,29 +11,32 @@
 	<script src="../../ui/jquery.ui.button.js"></script>
 	<link rel="stylesheet" href="../demos.css">
 	<script>
-	$(function() {
-		$( "button, input:submit, a", ".demo" ).button();
-		$( "a", ".demo" ).click(function() { return false; });
-	});
+		$(function () {
+			$("button, input:submit, a", ".demo").button();
+			$("a", ".demo").click(function () { return false; });
+		});
 	</script>
 </head>
+
 <body>
 
-<div class="demo">
+	<div class="demo">
 
-<button>A button element</button>
+		<button>A button element</button>
 
-<input type="submit" value="A submit button"/>
+		<input type="submit" value="A submit button" />
 
-<a href="#">An anchor</a>
+		<a href="#">An anchor</a>
 
-</div><!-- End demo -->
+	</div><!-- End demo -->
 
 
 
-<div class="demo-description">
-<p>Examples of the markup that can be used for buttons: A button element, an input of type submit and an anchor.</p>
-</div><!-- End demo-description -->
+	<div class="demo-description">
+		<p>Examples of the markup that can be used for buttons: A button element, an input of type submit and an anchor.
+		</p>
+	</div><!-- End demo-description -->
 
 </body>
+
 </html>

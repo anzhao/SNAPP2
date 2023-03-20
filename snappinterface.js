@@ -3,13 +3,12 @@
  */
 
 
-function displaySNAPP()
-{
-  
+function displaySNAPP() {
+
   jQuery('#container').tabs();
-  
-  jQuery("#filtervalue").spinbox(); 
-  
+
+  jQuery("#filtervalue").spinbox();
+
   isAppletLoaded();
- 
+
 }

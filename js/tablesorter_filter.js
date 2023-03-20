@@ -12,9 +12,9 @@
 */
 
 
-(function($) {
+(function ($) {
     $.extend({
-        tablesorterFilter: new function() {
+        tablesorterFilter: new function () {
 
             function has_words(str, words, caseSensitive) {
                 var text = caseSensitive ? str : str.toLowerCase();
@@ -36,11 +36,11 @@
                 var columns = table.config.filterColumns;
                 var resultRows = [];
 
-                var success = function(elem) {
+                var success = function (elem) {
                     elem.show();
                     resultRows.push(elem);
                 }
-                var failure = function(elem) { ; }
+                var failure = function (elem) { ; }
 
 
                 if (columns) {
@@ -49,13 +49,13 @@
                         findStr += "td:eq(" + columns[i] + "),";
                     }
 
-                    var search_text = function() {
+                    var search_text = function () {
                         var elem = jQuery(this);
 
                         has_words(elem.find(findStr).text(), words, caseSensitive) ? success(elem) : failure(elem);
                     }
                 } else {
-                    var search_text = function() {
+                    var search_text = function () {
                         var elem = jQuery(this);
 
                         has_words(elem.text(), words, caseSensitive) ? success(elem) : failure(elem);
@@ -117,9 +117,9 @@
             };
 
 
-            this.construct = function(settings) {
+            this.construct = function (settings) {
 
-                return this.each(function() {
+                return this.each(function () {
 
                     config = $.extend(this.config, $.tablesorterFilter.defaults, settings);
 
@@ -144,7 +144,7 @@
 
                     var timer;
 
-                    $(config.filterContainer).keyup(function() {
+                    $(config.filterContainer).keyup(function () {
                         var timerWait = 500;
                         var overrideBool = false;
                         var inputBox = this;
@@ -155,7 +155,7 @@
                             overrideBool = true;
                         }
 
-                        var timerCallback = function() {
+                        var timerCallback = function () {
                             checkInputBox(inputBox, overrideBool)
                         }
 
@@ -166,12 +166,12 @@
                         return false;
                     });
 
-                    $(config.filterClearContainer).click(function() {
+                    $(config.filterClearContainer).click(function () {
                         clearFilter(table);
                         $(config.filterContainer).val("").focus();
                     });
 
-                    $(table).bind("clearFilter", function() {
+                    $(table).bind("clearFilter", function () {
                         clearFilter(table);
                     });
                 });

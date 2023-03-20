@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<title>jQuery UI Datepicker - Dates in other months</title>
@@ -10,28 +11,30 @@
 	<script src="../../ui/jquery.ui.datepicker.js"></script>
 	<link rel="stylesheet" href="../demos.css">
 	<script>
-	$(function() {
-		$( "#datepicker" ).datepicker({
-			showOtherMonths: true,
-			selectOtherMonths: true
+		$(function () {
+			$("#datepicker").datepicker({
+				showOtherMonths: true,
+				selectOtherMonths: true
+			});
 		});
-	});
 	</script>
 </head>
+
 <body>
 
-<div class="demo">
+	<div class="demo">
 
-<p>Date: <input type="text" id="datepicker"></p>
+		<p>Date: <input type="text" id="datepicker"></p>
 
-</div><!-- End demo -->
+	</div><!-- End demo -->
 
 
 
-<div class="demo-description">
-<p>The datepicker can show dates that come from other than the main month
-	being displayed. These other dates can also be made selectable.</p>
-</div><!-- End demo-description -->
+	<div class="demo-description">
+		<p>The datepicker can show dates that come from other than the main month
+			being displayed. These other dates can also be made selectable.</p>
+	</div><!-- End demo-description -->
 
 </body>
+
 </html>
